@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
       html, body {
         height: 100%;
@@ -15,7 +16,40 @@
     </style>
   </head>
   <body>
-    <div style="width: 100%;height: 100%;" id="map"></div>
+
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Беларуская Салідарнасць</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a target="_blank" class="p-2 text-dark" href="https://forms.gle/9xSRbwgLavcJPwcaA">Даслаць новае</a>
+          <a target="_blank" class="p-2 text-dark" href="https://twitter.com/chegor">Звязацца з аўтарам</a>
+        </nav>
+      </div>
+
+    <div class="container" style="width: 100%;height: 100%;" id="map"></div>
+
+    <footer class="container pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <small class="d-block mb-3 text-muted">© 2020</small>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a target="_blank" class="p-2 text-dark" href="https://forms.gle/9xSRbwgLavcJPwcaA">Даслаць новае</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a target="_blank" class="p-2 text-dark" href="https://twitter.com/chegor">Звязацца з аўтарам</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a target="_blank" class="p-2 text-dark" href="https://github.com/chegor/Belarus_solidarity">Github</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
     <script>
       // initialize Leaflet
       var map = L.map('map').setView({lon: 27.559765, lat: 53.896793}, 12);
@@ -23,7 +57,7 @@
       // add the OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: ' <a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a> | <a target="_blank" href="https://twitter.com/chegor">Chegor</a>'
+        attribution: ' <a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a>'
       }).addTo(map);
 
       // show the scale bar on the lower left corner ,,
